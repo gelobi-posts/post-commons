@@ -1,0 +1,434 @@
+/*
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+@import url(../../../post-commons/icons/css/icons.css);
+@import url(../../../post-commons/xeno/extras/xeno.css);
+/* line 5, ../sass/stuff/_reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../sass/stuff/_reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../sass/stuff/_reset.sass */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../sass/stuff/_reset.sass */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../sass/stuff/_reset.sass */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../sass/stuff/_reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 44, ../sass/stuff/_reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../post-commons/fonts/droid-serif/brick/400.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Droid Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../../../post-commons/fonts/droid-serif/brick/400i.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Droid Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../../post-commons/fonts/droid-sans/google/700.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Droid Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../../post-commons/fonts/droid-sans/google/400.woff) format("woff");
+}
+
+/* line 1, ../sass/post/parts/_general.sass */
+body {
+  overflow-x: hidden;
+  background: url("../../../post-commons/images/post/bg.jpg");
+  font-family: "Droid Serif", serif;
+  font-size: 20px;
+  line-height: 33px;
+}
+
+/* line 11, ../sass/post/parts/_general.sass */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 16, ../sass/post/parts/_general.sass */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* line 20, ../sass/post/parts/_general.sass */
+html {
+  -ms-overflow-style: none;
+}
+
+/* line 1, ../sass/post/parts/_article.sass */
+.article {
+  position: relative;
+  width: 730px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 8, ../sass/post/parts/_article.sass */
+.article-head > h1 {
+  margin: 0 40px;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  margin-bottom: 1em;
+  margin-top: 4em;
+}
+
+/* line 19, ../sass/post/parts/_article.sass */
+.article-content {
+  color: #1c1c1c;
+  position: relative;
+}
+/* line 24, ../sass/post/parts/_article.sass */
+.article-content h2, .article-content h3, .article-content h4, .article-content p, .article-content ul, .article-content ol {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+/* line 29, ../sass/post/parts/_article.sass */
+.article-content h2, .article-content h3, .article-content h4 {
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+/* line 36, ../sass/post/parts/_article.sass */
+.article-content p, .article-content ul, .article-content ol {
+  margin-bottom: 0.5em;
+}
+/* line 40, ../sass/post/parts/_article.sass */
+.article-content ol {
+  counter-reset: listNumbering;
+}
+/* line 44, ../sass/post/parts/_article.sass */
+.article-content ol > li {
+  counter-increment: listNumbering;
+}
+/* line 48, ../sass/post/parts/_article.sass */
+.article-content ol > li:before {
+  content: counter(listNumbering,decimal) ".";
+}
+/* line 52, ../sass/post/parts/_article.sass */
+.article-content ul > li:before {
+  content: "\2022";
+}
+/* line 56, ../sass/post/parts/_article.sass */
+.article-content ol, .article-content ul {
+  list-style-type: none;
+  position: relative;
+}
+/* line 61, ../sass/post/parts/_article.sass */
+.article-content ol > li, .article-content ul > li {
+  margin-left: 24px;
+}
+/* line 65, ../sass/post/parts/_article.sass */
+.article-content ol > li:before, .article-content ul > li:before {
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+}
+
+/* line 72, ../sass/post/parts/_article.sass */
+.article-content a {
+  position: relative;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 77, ../sass/post/parts/_article.sass */
+.article-content a:before {
+  display: block;
+  content: "\0020";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -4px;
+  bottom: 0px;
+  border-bottom: 1px solid darkgrey;
+  z-index: -1;
+}
+/* line 93, ../sass/post/parts/_article.sass */
+.article-content a:hover:before {
+  border-bottom-color: black;
+}
+
+/* line 97, ../sass/post/parts/_article.sass */
+.article > .comments {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 1em;
+}
+
+/* line 1, ../sass/post/parts/_film.sass */
+.filmSpace {
+  position: relative;
+  margin-top: 1em;
+}
+
+/* line 1, ../sass/post/parts/_footer.sass */
+.footer {
+  position: relative;
+  width: 650px;
+  height: auto;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 10px;
+}
+
+/* line 21, ../sass/post/parts/_footer.sass */
+.newsletter {
+  width: 50%;
+  height: auto;
+  float: left;
+}
+/* line 28, ../sass/post/parts/_footer.sass */
+.newsletter form {
+  width: 100%;
+}
+
+/* line 32, ../sass/post/parts/_footer.sass */
+.subscribe-label {
+  font-family: "Droid Sans", sans-serif;
+  font-size: 14px;
+  color: #999999;
+  position: relative;
+  left: 6px;
+}
+
+/* line 44, ../sass/post/parts/_footer.sass */
+.post-mail {
+  margin-top: 5px;
+  width: 60%;
+  height: 40px;
+  float: left;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-indent: 10px;
+  font-family: "Droid Sans", sans-serif;
+  font-size: 14px;
+  background: none;
+}
+/* line 65, ../sass/post/parts/_footer.sass */
+.post-mail:focus {
+  outline: none;
+}
+
+/* line 69, ../sass/post/parts/_footer.sass */
+.clear {
+  height: 40px;
+  width: 40%;
+  margin-top: 5px;
+  float: left;
+  position: relative;
+}
+
+/* line 79, ../sass/post/parts/_footer.sass */
+.post-subscribe {
+  margin: 0;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 40px;
+  border: none;
+  background: none;
+  color: black;
+  font-size: 13px;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+/* line 101, ../sass/post/parts/_footer.sass */
+.post-subscribe:focus {
+  outline: none;
+}
+/* line 105, ../sass/post/parts/_footer.sass */
+.post-subscribe:before {
+  display: block;
+  content: "\0020";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -4px;
+  bottom: 0px;
+  border-bottom: 1px solid #636363;
+  z-index: -1;
+}
+/* line 119, ../sass/post/parts/_footer.sass */
+.post-subscribe:after {
+  display: block;
+  content: "\0020";
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  top: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background: #222222;
+  -webkit-transform: scale(0.9) translateZ(-1px);
+  -ms-transform: scale(0.9) translateZ(-1px);
+  -o-transform: scale(0.9) translateZ(-1px);
+  transform: scale(0.9) translateZ(-1px);
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  opacity: 0;
+}
+/* line 139, ../sass/post/parts/_footer.sass */
+.post-subscribe:hover {
+  color: #fafafa;
+}
+/* line 143, ../sass/post/parts/_footer.sass */
+.post-subscribe:hover:after {
+  -webkit-transform: scale(1) translateZ(-1px);
+  -ms-transform: scale(1) translateZ(-1px);
+  -o-transform: scale(1) translateZ(-1px);
+  transform: scale(1) translateZ(-1px);
+  opacity: 1;
+}
+
+/* line 149, ../sass/post/parts/_footer.sass */
+.footer-links {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 159, ../sass/post/parts/_footer.sass */
+.pixana-link {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  font-size: 14px;
+  font-family: "Droid Sans", sans-serif;
+  color: #999999;
+}
+/* line 172, ../sass/post/parts/_footer.sass */
+.pixana-link a:hover {
+  color: #55acee;
+}
+
+/* line 176, ../sass/post/parts/_footer.sass */
+.font-icon, .footer-mail, .social-twitter, .social-facebook, .license-cc {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 23px;
+  text-indent: -4px;
+  position: absolute;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+/* line 191, ../sass/post/parts/_footer.sass */
+.footer-icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+/* line 200, ../sass/post/parts/_footer.sass */
+.footer-mail {
+  right: 88px;
+}
+/* line 206, ../sass/post/parts/_footer.sass */
+.footer-mail:hover {
+  color: #d64937;
+}
+
+/* line 210, ../sass/post/parts/_footer.sass */
+.social-twitter {
+  right: 56px;
+}
+/* line 216, ../sass/post/parts/_footer.sass */
+.social-twitter:hover {
+  color: #55acee;
+}
+
+/* line 220, ../sass/post/parts/_footer.sass */
+.social-facebook {
+  right: 24px;
+}
+/* line 226, ../sass/post/parts/_footer.sass */
+.social-facebook:hover {
+  color: #45619d;
+}
+
+/* line 230, ../sass/post/parts/_footer.sass */
+.license-cc {
+  right: -8px;
+}
+/* line 236, ../sass/post/parts/_footer.sass */
+.license-cc:hover {
+  color: black;
+}
+
+/* line 15, ../sass/post.sass */
+.pageContainer {
+  z-index: 1;
+}
