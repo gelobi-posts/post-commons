@@ -2,8 +2,8 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
+@import url(http://fast.fonts.net/cssapi/3187c5a6-7c8f-4edc-9b49-90caff7bdda0.css);
 @import url(../../../post-commons/icons/css/icons.css);
-@import url(../../../post-commons/xeno/extras/xeno.css);
 /* line 5, ../sass/stuff/_reset.sass */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -62,20 +62,6 @@ table {
 }
 
 @font-face {
-  font-family: "Droid Serif";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../../../post-commons/fonts/droid-serif/brick/400.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Droid Serif";
-  font-style: italic;
-  font-weight: 400;
-  src: url(../../../post-commons/fonts/droid-serif/brick/400i.woff) format("woff");
-}
-
-@font-face {
   font-family: "Droid Sans";
   font-style: normal;
   font-weight: 700;
@@ -94,8 +80,8 @@ body {
   overflow-x: hidden;
   background: url("../../../post-commons/images/post/bg.jpg");
   font-family: "Droid Serif", serif;
-  font-size: 20px;
-  line-height: 33px;
+  font-size: 19px;
+  line-height: 31px;
 }
 
 /* line 11, ../sass/post/parts/_general.sass */
@@ -105,16 +91,38 @@ a {
 }
 
 /* line 16, ../sass/post/parts/_general.sass */
+code {
+  background: #e6e6e6;
+  font-family: Consolas, Inconsolata, Monaco, monospace;
+  padding: 0 0.3em;
+  font-size: 0.9em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 26, ../sass/post/parts/_general.sass */
 ::-webkit-scrollbar {
   width: 0;
 }
 
-/* line 20, ../sass/post/parts/_general.sass */
+/* line 30, ../sass/post/parts/_general.sass */
 html {
   -ms-overflow-style: none;
 }
 
 /* line 1, ../sass/post/parts/_article.sass */
+h1, h2 {
+  font-family: "DIN Next Slab W01";
+  font-weight: 500;
+}
+
+/* line 6, ../sass/post/parts/_article.sass */
+.article {
+  font-family: "ITC Charter W01";
+}
+
+/* line 10, ../sass/post/parts/_article.sass */
 .article {
   position: relative;
   width: 730px;
@@ -122,77 +130,80 @@ html {
   margin-left: auto;
 }
 
-/* line 8, ../sass/post/parts/_article.sass */
+/* line 17, ../sass/post/parts/_article.sass */
 .article-head > h1 {
-  margin: 0 40px;
-  font-family: sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 46px;
-  margin-bottom: 1em;
+  margin: 0 20px;
+  font-size: 32px;
+  line-height: 42px;
+  margin-bottom: 0.9em;
   margin-top: 4em;
 }
 
-/* line 19, ../sass/post/parts/_article.sass */
+/* line 26, ../sass/post/parts/_article.sass */
 .article-content {
   color: #1c1c1c;
   position: relative;
 }
-/* line 24, ../sass/post/parts/_article.sass */
-.article-content h2, .article-content h3, .article-content h4, .article-content p, .article-content ul, .article-content ol {
+/* line 31, ../sass/post/parts/_article.sass */
+.article-content h2, .article-content h3, .article-content h4, .article-content p, .article-content ul, .article-content ol, .article-content blockquote {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 36, ../sass/post/parts/_article.sass */
+.article-content h2, .article-content h3, .article-content h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+}
+/* line 41, ../sass/post/parts/_article.sass */
+.article-content p, .article-content ul, .article-content ol {
+  margin-bottom: 0.6em;
+}
+/* line 45, ../sass/post/parts/_article.sass */
+.article-content blockquote {
+  font-size: 1.2em;
+  font-style: italic;
   margin-left: 40px;
   margin-right: 40px;
 }
-/* line 29, ../sass/post/parts/_article.sass */
-.article-content h2, .article-content h3, .article-content h4 {
-  font-family: sans-serif;
-  font-weight: 700;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-/* line 36, ../sass/post/parts/_article.sass */
-.article-content p, .article-content ul, .article-content ol {
-  margin-bottom: 0.5em;
-}
-/* line 40, ../sass/post/parts/_article.sass */
+/* line 52, ../sass/post/parts/_article.sass */
 .article-content ol {
   counter-reset: listNumbering;
 }
-/* line 44, ../sass/post/parts/_article.sass */
+/* line 56, ../sass/post/parts/_article.sass */
 .article-content ol > li {
   counter-increment: listNumbering;
 }
-/* line 48, ../sass/post/parts/_article.sass */
+/* line 60, ../sass/post/parts/_article.sass */
 .article-content ol > li:before {
   content: counter(listNumbering,decimal) ".";
 }
-/* line 52, ../sass/post/parts/_article.sass */
+/* line 64, ../sass/post/parts/_article.sass */
 .article-content ul > li:before {
   content: "\2022";
 }
-/* line 56, ../sass/post/parts/_article.sass */
+/* line 68, ../sass/post/parts/_article.sass */
 .article-content ol, .article-content ul {
   list-style-type: none;
   position: relative;
 }
-/* line 61, ../sass/post/parts/_article.sass */
+/* line 73, ../sass/post/parts/_article.sass */
 .article-content ol > li, .article-content ul > li {
   margin-left: 24px;
 }
-/* line 65, ../sass/post/parts/_article.sass */
+/* line 77, ../sass/post/parts/_article.sass */
 .article-content ol > li:before, .article-content ul > li:before {
   position: absolute;
   left: 0;
   font-size: 15px;
 }
 
-/* line 72, ../sass/post/parts/_article.sass */
+/* line 84, ../sass/post/parts/_article.sass */
 .article-content a {
   position: relative;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 77, ../sass/post/parts/_article.sass */
+/* line 89, ../sass/post/parts/_article.sass */
 .article-content a:before {
   display: block;
   content: "\0020";
@@ -204,16 +215,59 @@ html {
   border-bottom: 1px solid darkgrey;
   z-index: -1;
 }
-/* line 93, ../sass/post/parts/_article.sass */
+/* line 105, ../sass/post/parts/_article.sass */
 .article-content a:hover:before {
   border-bottom-color: black;
 }
 
-/* line 97, ../sass/post/parts/_article.sass */
+/* line 109, ../sass/post/parts/_article.sass */
 .article > .comments {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 1em;
+}
+
+/* line 115, ../sass/post/parts/_article.sass */
+.articleSide {
+  position: absolute;
+  left: -90px;
+  top: 7px;
+  width: 79px;
+  height: 28.25px;
+}
+/* line 123, ../sass/post/parts/_article.sass */
+.articleSide .logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-image: url("../../../post-commons/images/post/gelobi-logo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+/* line 136, ../sass/post/parts/_article.sass */
+.articleSide .date {
+  position: absolute;
+  bottom: -30px;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  right: 0;
+  text-align: right;
+}
+/* line 146, ../sass/post/parts/_article.sass */
+.articleSide .logo, .articleSide .date {
+  opacity: 0.75;
+}
+/* line 150, ../sass/post/parts/_article.sass */
+.articleSide .logo:before, .articleSide .date:before {
+  display: none;
+}
+/* line 154, ../sass/post/parts/_article.sass */
+.articleSide .logo:hover, .articleSide .date:hover {
+  opacity: 1;
 }
 
 /* line 1, ../sass/post/parts/_film.sass */
@@ -225,7 +279,7 @@ html {
 /* line 1, ../sass/post/parts/_footer.sass */
 .footer {
   position: relative;
-  width: 650px;
+  width: 690px;
   height: auto;
   overflow: hidden;
   margin-left: auto;
